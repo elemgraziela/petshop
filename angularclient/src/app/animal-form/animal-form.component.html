@@ -1,0 +1,49 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #animalForm="ngForm">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" [(ngModel)]="animal.name"
+               class="form-control" id="name" name="name"
+               required #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="raca">Raça</label>
+        <input type="text" [(ngModel)]="animal.breed"
+               class="form-control" id="raca" name="raca"
+               required #breed="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="size">Porte</label>
+        <input type="text" [(ngModel)]="animal.size"
+               class="form-control" id="size" name="size"
+               required #size="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="description">Descrição</label>
+        <input type="text" [(ngModel)]="animal.description"
+               class="form-control" id="description" name="description"
+               required #description="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="habits">Hábitos</label>
+        <input type="text" [(ngModel)]="animal.habits"
+               class="form-control" id="habits" name="habits"
+               required #habits="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="allergy">Alergias</label>
+        <input type="text" [(ngModel)]="animal.allergy"
+               class="form-control" id="allergy" name="allergy"
+               required #allergy="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="animalType">Animal Type</label>
+        <input type="text" [(ngModel)]="animal.animalType"
+               class="form-control" id="animalType" name="animalType"
+               required #animalType="ngModel">
+      </div>
+      <button type="submit" [disabled]="!animal.form.valid" class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

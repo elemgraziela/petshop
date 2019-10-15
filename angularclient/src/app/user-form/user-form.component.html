@@ -1,0 +1,57 @@
+
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="user.name"
+               class="form-control" id="name" name="name"
+               required #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="rg">Identidade</label>
+        <input type="text" [(ngModel)]="user.rg"
+               class="form-control" id="rg" name="rg"
+               required #rg="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input type="text" [(ngModel)]="user.cpf"
+               class="form-control" id="cpf" name="cpf"
+               required #cpf="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" [(ngModel)]="user.email"
+               class="form-control" id="email" name="email"
+               required #email="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="address">Endereço</label>
+        <input type="text" [(ngModel)]="user.address"
+               class="form-control" id="address" name="address"
+               required #address="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefone</label>
+        <input type="text" [(ngModel)]="user.phone"
+               class="form-control" id="phone" name="phone"
+               required #phone="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="pataz">Pataz</label>
+        <input type="text" [(ngModel)]="user.pataz"
+               class="form-control" id="pataz" name="pataz"
+               required #pataz="ngModel">
+      </div>
+      <!--<div class="form-group">
+        <label for="personType">Tipo</label>
+        <input type="text" [(ngModel)]="user.personType"
+               class="form-control" id="personType" name="personType" placeholder="Enter your personType"
+              required #personType="ngModel">
+      </div>-->
+
+      <button type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>

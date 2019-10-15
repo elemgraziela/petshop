@@ -1,0 +1,35 @@
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Raça</th>
+        <th scope="col">Porte</th>
+        <th scope="col">Alergias</th>
+        <th scope="col">Hábitos</th>
+        <th scope="col">Autorização</th>
+        <th scope="col">Ações</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let animal of animals">
+        <td>{{ animal.id }}</td>
+        <td>{{ animal.name }}</td>
+        <td>{{ animal.animalType.type }}</td>
+        <td>{{ animal.breed }}</td>
+        <td>{{ animal.size }}</td>
+        <td>{{ animal.allergy }}</td>
+        <td>{{ animal.habits }}</td>
+        <td>{{animal.authorization}}</td>
+        <td>
+          <button type="button" class="btn btn-info btn-sm ml-1">Editar</button>
+          <button type="button" class="btn btn-danger btn-sm ml-1" (click)="openConfirmationDialog(animal.id)">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

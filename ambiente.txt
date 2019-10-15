@@ -1,0 +1,9 @@
+Angular
+-instalar nodejs
+
+-Para rodar o servidor
+-- abrir o terminal, ir até o caminho do projeto. Entrar na pasta "angularcli".
+-- ng serve --open
+
+Java
+- Executar classe Boot.java
